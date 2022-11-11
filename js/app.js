@@ -377,14 +377,16 @@
       document.documentElement.classList.contains("lock") ? n(e) : r(e);
     },
     n = (e = 500) => {
-      let t = document.querySelector("body");
+      let t = document.querySelector("body"),
+        i = document.querySelector(".header");
       if (s) {
-        let i = document.querySelectorAll("[data-lp]");
+        let n = document.querySelectorAll("[data-lp]");
         setTimeout(() => {
-          for (let e = 0; e < i.length; e++) {
-            i[e].style.paddingRight = "0px";
+          for (let e = 0; e < n.length; e++) {
+            n[e].style.paddingRight = "0px";
           }
           (t.style.paddingRight = "0px"),
+            (i.style.paddingRight = "0px"),
             document.documentElement.classList.remove("lock");
         }, e),
           (s = !1),
@@ -394,11 +396,12 @@
       }
     },
     r = (e = 500) => {
-      let t = document.querySelector("body");
+      let t = document.querySelector("body"),
+        i = document.querySelector(".header");
       if (s) {
-        let i = document.querySelectorAll("[data-lp]");
-        for (let e = 0; e < i.length; e++) {
-          i[e].style.paddingRight =
+        let n = document.querySelectorAll("[data-lp]");
+        for (let e = 0; e < n.length; e++) {
+          n[e].style.paddingRight =
             window.innerWidth -
             document.querySelector(".wrapper").offsetWidth +
             "px";
@@ -407,6 +410,11 @@
           window.innerWidth -
           document.querySelector(".wrapper").offsetWidth +
           "px"),
+          document.documentElement.classList.add("lock"),
+          (i.style.paddingRight =
+            window.innerWidth -
+            document.querySelector(".wrapper").offsetWidth +
+            "px"),
           document.documentElement.classList.add("lock"),
           (s = !1),
           setTimeout(function () {
