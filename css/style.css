@@ -141,7 +141,6 @@ textarea {
   border-radius: 8px;
 }
 .input._focus {
-  color: red;
   border: none;
 }
 textarea.input {
@@ -799,7 +798,7 @@ body.popup-show::after {
 }
 
 .input._form-focus {
-  border: 4px solid rgba(255, 0, 0, 0);
+  border: none;
   outline: none;
 }
 
